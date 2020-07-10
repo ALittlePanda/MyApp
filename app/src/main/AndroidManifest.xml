@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapp">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".layout.findedlayout"></activity>
+        <activity android:name=".secondMain.FindMe" />
+        <activity android:name=".other.AboutUs" />
+        <activity android:name=".other.User" />
+        <activity android:name=".other.AddUs" />
+        <activity android:name=".other.PingFen" />
+        <activity android:name=".layout.Home_Activity" />
+        <activity android:name=".layout.AboutActivity" />
+        <activity android:name=".layout.CaiDan" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".FristMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
