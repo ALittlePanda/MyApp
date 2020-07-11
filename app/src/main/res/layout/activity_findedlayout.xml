@@ -17,20 +17,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:toolbarId="@+id/toolbar"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
 
             app:contentScrim="?attr/colorPrimary">
 
             <ImageView
-                android:id="@+id/app_bar_image"
+                android:id="@+id/app_bar_image01"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/findedlayout_appbarimage"
+                app:layout_collapseMode="parallax"
 
-                android:scaleType="centerCrop"
                 android:src="@android:drawable/sym_def_app_icon"
-                app:layout_collapseMode="parallax" />
+                android:scaleType="centerCrop" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -47,21 +46,30 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".layout.findedlayout">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/findedlayout_text"
+                android:id="@+id/Ftext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/findlayout_text"
+                android:text="@string/Ftext"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-    "
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_revert"
+        app:backgroundTint="@color/cardview_dark_background" />"
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

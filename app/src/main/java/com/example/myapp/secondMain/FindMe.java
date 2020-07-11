@@ -7,12 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myapp.MainActivity;
 import com.example.myapp.R;
 
 public class FindMe extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class FindMe extends AppCompatActivity {
     private TextView view ,find_month,find_day;
     private Spinner spinner1,spinner2,spinner3;
     private ArrayAdapter<String> adapter,adapter2,adapter3;
-    private Button button;
+    private Button button, button2;
 
     int monthed,dayed;
     @Override
@@ -35,7 +33,8 @@ public class FindMe extends AppCompatActivity {
         spinner1 = (Spinner) findViewById(R.id.spinner1);
         spinner2 = (Spinner)findViewById(R.id.spinner2);
         spinner3 = (Spinner)findViewById(R.id.spinner3);
-        button = (Button)findViewById(R.id.find_button);
+        button = (Button)findViewById(R.id.FindMe_button1);
+        button2 = (Button)findViewById(R.id.FindMe_button);
         //将可选内容与ArrayAdapter连接起来
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,year);
         adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,month);
@@ -78,7 +77,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=2&&monthed<=3){
+               else if(monthed>=2&&monthed<=3){
                     if(monthed<3){
                         if(dayed>=19){
                             //输出双鱼座
@@ -93,7 +92,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=3&&monthed<=4){
+               else if(monthed>=3&&monthed<=4){
                     if(monthed<4){
                         if(dayed>=21){
                             //输出白羊座
@@ -108,7 +107,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=4&&monthed<=5){
+                else if(monthed>=4&&monthed<=5){
                     if(monthed<5){
                         if(dayed>=20){
                             //输出金牛座
@@ -123,7 +122,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=5&&monthed<=6){
+                else if(monthed>=5&&monthed<=6){
                     if(monthed<6){
                         if(dayed>=21){
                             //输出双子
@@ -138,7 +137,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=6&&monthed<=7){
+                else if(monthed>=6&&monthed<=7){
                     if(monthed<7){
                         if(dayed>=22){
                             //输出巨蟹
@@ -153,7 +152,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=7&&monthed<=8){
+                else if(monthed>=7&&monthed<=8){
                     if(monthed<8){
                         if(dayed>=23){
                             //输出狮子
@@ -168,7 +167,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=8&&monthed<=9){
+                else if(monthed>=8&&monthed<=9){
                     if(monthed<9){
                         if(dayed>=23){
                             //输出处女
@@ -183,7 +182,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=9&&monthed<=10){
+                else if(monthed>=9&&monthed<=10){
                     if(monthed<10){
                         if(dayed>=23){
                             //输出天秤
@@ -198,7 +197,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=10&&monthed<=11){
+                else if(monthed>=10&&monthed<=11){
                     if(monthed<11){
                         if(dayed>=24){
                             //输出天蝎
@@ -213,7 +212,7 @@ public class FindMe extends AppCompatActivity {
                     }
                 }
 
-                if(monthed>=11&&monthed<=12){
+                else if(monthed>=11&&monthed<=12){
                     if(monthed<12){
                         if(dayed>=23){
                             //输出射手
@@ -232,6 +231,12 @@ public class FindMe extends AppCompatActivity {
                     //输出摩羯
                     Toast.makeText(FindMe.this, "您是摩羯座", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FindMe.this.finish();
             }
         });
 

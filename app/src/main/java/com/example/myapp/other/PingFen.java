@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.myapp.R;
 
@@ -18,6 +19,7 @@ public class PingFen extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(PingFen.this, "谢谢", Toast.LENGTH_SHORT).show();
                 PingFen.this.finish();
             }
         });

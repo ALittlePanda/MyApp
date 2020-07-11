@@ -4,10 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
+        android:label="星座解密大师"
         android:supportsRtl="true"
+        android:icon="@drawable/and1001"
         android:theme="@style/AppTheme">
-        <activity android:name=".layout.findedlayout"></activity>
+        <activity android:name=".secondMain.Activity_MeAndYou"></activity>
+        <activity android:name=".secondMain.What" />
+        <activity android:name=".layout.findedlayout" />
         <activity android:name=".secondMain.FindMe" />
         <activity android:name=".other.AboutUs" />
         <activity android:name=".other.User" />

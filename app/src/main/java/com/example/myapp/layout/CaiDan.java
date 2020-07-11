@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.example.myapp.R;
 import com.example.myapp.secondMain.FindMe;
+import com.example.myapp.secondMain.What;
+import com.example.myapp.secondMain.Activity_MeAndYou;
 
 public class CaiDan extends AppCompatActivity {
     private Button button, button2, button3;
@@ -31,12 +33,16 @@ public class CaiDan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //判断性格
+                Intent intent = new Intent(CaiDan.this, What.class);
+                startActivity(intent);
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //匹配
+              Intent intent = new Intent(CaiDan.this, Activity_MeAndYou.class);
+                startActivity(intent);
             }
         });
     }
